@@ -29,9 +29,3 @@ jobs:
         app-name: 'fastapi-app-8d7006df'  # ← Replace with your real app name
         publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
         package: .
-
-    # ⬇️ Make sure this is inside `steps`, and indented correctly
-    - name: Set Azure Startup Command
-      run: az webapp config set --name fastapi-app-8d7006df --resource-group YOUR_RESOURCE_GROUP --startup-file "bash startup.sh"
-      env:
-        AZURE_WEBAPP_PUBLISH_PROFILE: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
