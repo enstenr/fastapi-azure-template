@@ -1,9 +1,4 @@
 name: msdocs-python-fastapi-webapp-quickstart
-services:
-  web:
-    project: .
-    language: python
-    host: appservice
 on:
   push:
     branches:
