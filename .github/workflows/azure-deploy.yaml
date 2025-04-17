@@ -25,7 +25,7 @@ jobs:
     - name: Deploy to Azure Web App via Publish Profile
       uses: azure/webapps-deploy@v2
       with:
-        app-name: 'backend-api'  # ← Replace with your real app name
+        app-name: 'wonderful-sand-0c2e2339d3f643288a4ac6e60693bcc7'  # ← Replace with your real app name
         publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
         package: .
       
