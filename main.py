@@ -31,8 +31,8 @@ async def hello(request: Request, name: str = Form(...)):
 
 @app.get("/status", response_class=JSONResponse)
 async def get_status():
-    return {"status": "ok", "message": "API is running"}
-    
+    return {"status": "ok", "message": "API is running  "}
+
 if __name__ == '__main__':
     uvicorn.run('main:app', host='0.0.0.0', port=8000)
 
