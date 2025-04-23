@@ -29,6 +29,10 @@ async def hello(request: Request, name: str = Form(...)):
         print('Request for hello page received with no name or blank name -- redirecting')
         return RedirectResponse(request.url_for("index"), status_code=status.HTTP_302_FOUND)
 
+@app.get("/status", response_class=JSONResponse)
+async def get_status():
+    return {"status": "ok", "message": "API is running"}
+    
 if __name__ == '__main__':
     uvicorn.run('main:app', host='0.0.0.0', port=8000)
 
